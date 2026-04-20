@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>4.20算法题总结 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="算法题总结1.随机分配办公室需求：定义列表, 记录8个老师的信息, 例如: names_list &#x3D; [‘乔峰’, ‘虚竹’, ‘段誉’…] ​	    定义列表, 记录办公室, 例如: office_list &#x3D; [[], [], []],  每个元素都是该办公室的老师名. 结果：office_list &#x3D; [[老师1, 老师3, 老师5], [老师2, 老师4,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4.20算法题总结">
+<meta property="og:url" content="http://example.com/2026/04/20/4-20%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="算法题总结1.随机分配办公室需求：定义列表, 记录8个老师的信息, 例如: names_list &#x3D; [‘乔峰’, ‘虚竹’, ‘段誉’…] ​	    定义列表, 记录办公室, 例如: office_list &#x3D; [[], [], []],  每个元素都是该办公室的老师名. 结果：office_list &#x3D; [[老师1, 老师3, 老师5], [老师2, 老师4,">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-04-20T13:14:08.000Z">
+<meta property="article:modified_time" content="2026-04-20T13:42:19.467Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "4.20算法题总结",
+  "url": "http://example.com/2026/04/20/4-20%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/",
+  "image": "http://example.com/img/butterfly-icon.png",
+  "datePublished": "2026-04-20T13:14:08.000Z",
+  "dateModified": "2026-04-20T13:42:19.467Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/04/20/4-20%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.5-b1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '4.20算法题总结',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">4.20算法题总结</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">4.20算法题总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-04-20T13:14:08.000Z" title="Created 2026-04-20 21:14:08">2026-04-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-04-20T13:42:19.467Z" title="Updated 2026-04-20 21:42:19">2026-04-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="算法题总结"><a href="#算法题总结" class="headerlink" title="算法题总结"></a>算法题总结</h1><h2 id="1-随机分配办公室"><a href="#1-随机分配办公室" class="headerlink" title="1.随机分配办公室"></a>1.随机分配办公室</h2><p>需求：定义列表, 记录8个老师的信息, 例如: names_list &#x3D; [‘乔峰’, ‘虚竹’, ‘段誉’…]</p>
+<p>​	    定义列表, 记录办公室, 例如: office_list &#x3D; [[], [], []],  每个元素都是该办公室的老师名.</p>
+<p>结果：office_list &#x3D; [[老师1, 老师3, 老师5], [老师2, 老师4, 老师6, 老师7], [老师8]]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">names_list = [<span class="string">&#x27;吕布1&#x27;</span>, <span class="string">&#x27;虚竹2&#x27;</span>, <span class="string">&#x27;段誉3&#x27;</span>,<span class="string">&#x27;公孙离4&#x27;</span>,<span class="string">&#x27;李白5&#x27;</span>,<span class="string">&#x27;安其拉6&#x27;</span>,<span class="string">&#x27;项羽7&#x27;</span>,<span class="string">&#x27;白起8&#x27;</span>]</span><br><span class="line">office_list=[[],[],[]]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> names_list:</span><br><span class="line">    office_list[random.randint(<span class="number">0</span>,<span class="number">2</span>)].append(i)</span><br><span class="line"><span class="built_in">print</span>(office_list)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<p>![image-20260420211837615](&#x2F;Users&#x2F;chenjiahaodepingguo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20260420211837615.png)</p>
+<h2 id="2-约瑟夫环"><a href="#2-约瑟夫环" class="headerlink" title="2.约瑟夫环"></a>2.约瑟夫环</h2><p>需求：有一天你穿越到了古代, 碰巧约到古代的皇帝在杀人, 有两个消息, 1个好消息, 1个坏消息.</p>
+<p>坏消息: 你也在此列.</p>
+<p>好消息: 你可以选择自己站的位置.</p>
+<p>规则：让所有的人从1开始不断数数, 每次累加1, 只要数到3的倍数, 就干掉这个人, 直至剩下最后1个人, 他站的位置就是幸运数字.</p>
+<p>步骤：</p>
+<p>1.定义变量，记录参与的人数并接收</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">people=<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请录入参加游戏的人数:&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>2.生成列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lst=[i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,people+<span class="number">1</span>)]</span><br></pre></td></tr></table></figure>
+
+<p>3.定义变量，分别记录当前数到的数字和索引</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curr_num=<span class="number">0</span><span class="comment"># 当前数到的数字 控制是否是3的倍数，只要是倍数，就直接kill</span></span><br><span class="line">index=<span class="number">0</span><span class="comment"># 当前元素的索引</span></span><br></pre></td></tr></table></figure>
+
+<p>4.循环，直到列表中只剩下一个数字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">len</span>(lst)&gt;<span class="number">1</span>:</span><br><span class="line">  	curr_num+=<span class="number">1</span><span class="comment">#数数字</span></span><br><span class="line">    <span class="keyword">if</span> curr_num%<span class="number">3</span>==<span class="number">0</span>:<span class="comment">#判断是否为3的倍数</span></span><br><span class="line">      	lst.pop(i)<span class="comment">#是就删除这个元素</span></span><br><span class="line">        i-=<span class="number">1</span><span class="comment">#细节1: 因为删除元素后, 后续元素的索引会-1, 所以: i也要同步-1</span></span><br><span class="line">    i+=<span class="number">1</span><span class="comment">#走到这里, 说明上个人已经报过数字了, 我们继续游戏即可.</span></span><br><span class="line">    <span class="keyword">if</span> i&gt;<span class="built_in">len</span>(lst):<span class="comment">#越界处理</span></span><br><span class="line">      	i=<span class="number">0</span><span class="comment">#细节2: 走到这里, 说明本轮结束, (开启下轮报数)从头开始报数即可.</span></span><br><span class="line"><span class="built_in">print</span>(lst)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-查找回文数"><a href="#3-查找回文数" class="headerlink" title="3.查找回文数"></a>3.查找回文数</h2><p>需求：查找最近回文数.回文数是指从前往后读和从后往前读都是一样的数字，比如 121。</p>
+<p>1.判断是否为回文。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">is_palindrome</span>(<span class="params">num</span>):</span><br><span class="line">  	s=<span class="built_in">str</span>(num)</span><br><span class="line">    s_reverse=[::-<span class="number">1</span>]<span class="comment">#字符反转，判断回文神器</span></span><br><span class="line">    <span class="keyword">return</span> s==s_reverse <span class="comment">#返回True或者False</span></span><br></pre></td></tr></table></figure>
+
+<p>2.找出距离最近的回文</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dear_palindrome</span>(<span class="params">n</span>):</span><br><span class="line">  	low=n-<span class="number">1</span> <span class="comment">#向后找</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> is_palindrome(low):</span><br><span class="line">      low-=<span class="number">1</span></span><br><span class="line">      </span><br><span class="line">    high=n+<span class="number">1</span><span class="comment">#向前找</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> is_palindrome(high):</span><br><span class="line">      high+=<span class="number">1</span></span><br><span class="line">     </span><br><span class="line">    <span class="keyword">if</span> n-low&lt;=high-n:<span class="comment">#判断哪个回文数更近</span></span><br><span class="line">      <span class="keyword">return</span> low</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    	<span class="keyword">return</span> high</span><br><span class="line">    </span><br><span class="line">num=<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个整数:&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;离<span class="subst">&#123;num&#125;</span>最近的回文数字是:<span class="subst">&#123;near_palindrome(num)&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-删除有序数组中的重复项"><a href="#4-删除有序数组中的重复项" class="headerlink" title="4.删除有序数组中的重复项"></a>4.删除有序数组中的重复项</h2><p>需求：给你一个升序排列的数组 nums，请你原地删除重复出现的元素，使每个元素只出现一次，返回删除后数组的新长度。不要创建新数组，直接在原数组上改。</p>
+<p>例子：输入：nums &#x3D; [1,1,2]</p>
+<p>输出：2，并且数组前两位变成：[1,2,<em>,</em>…]</p>
+<p>方法：快慢指针</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">removeDuplicates</span>(<span class="params">nums</span>):</span><br><span class="line">  	<span class="keyword">if</span> <span class="keyword">not</span> nums:<span class="comment">#如果数组为空，返回0</span></span><br><span class="line">      	<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    left=<span class="number">0</span> <span class="comment">#慢指针从下标0开始</span></span><br><span class="line">    <span class="keyword">for</span> right <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(nums)):<span class="comment">#快指针从1开始</span></span><br><span class="line">      	<span class="keyword">if</span> nums[right]!=nums[left]:</span><br><span class="line">        <span class="comment">#如果快指针指向的值和慢指针不同，慢指针向前一位</span></span><br><span class="line">        left+=<span class="number">1</span></span><br><span class="line">        nums[left]=nums[right]</span><br><span class="line">    <span class="keyword">return</span> left+<span class="number">1</span><span class="comment">#left+1就是当前数组中元素的数量</span></span><br><span class="line">result=removeDuplicates(nums)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>结果：</p>
+<p>输入：nums &#x3D; [0,0,1,1,1,2,2,3,3,4]</p>
+<p>输出：5</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2026/04/20/4-20%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/">http://example.com/2026/04/20/4-20%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/04/19/4.19%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/" title="算法题总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">算法题总结</div></div><div class="info-2"><div class="info-item-1">算法题总结1.打印水仙花数要求：将所有的水仙花数及水仙花数的总个数打印到控制台上. 水仙花数解释： 1.水仙花是一个三位数 2.它的各个位数的立方和相加等于它本身 例如: 153 &#x3D; 1 * 1 * 1 + 5 * 5 * 5 + 3 * 3 * 3 123456for num in range(100,100):  	hundreds=num//100 #371//100=3  	tens=(num//10)%10 #(371//10)=37 37%10=7    ones=num%10 #371%10=1    if hundreds**3+tens**3+ones**3==num    	print(num)    输出： 1234153370371407  2.数字金字塔要求：打印一个数字金字塔，共n层，当n&#x3D;5时，输出 12345    1   121  12321 1234321123454321  思路：n&#x3D;5时共输出5行，n在最中央，当n&#x3D;1时，n左侧有n-1即4个空格，将金字塔分为两部分，左侧是1～n，右侧是n-1～1. ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/04/19/4.19%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/" title="算法题总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-19</div><div class="info-item-2">算法题总结</div></div><div class="info-2"><div class="info-item-1">算法题总结1.打印水仙花数要求：将所有的水仙花数及水仙花数的总个数打印到控制台上. 水仙花数解释： 1.水仙花是一个三位数 2.它的各个位数的立方和相加等于它本身 例如: 153 &#x3D; 1 * 1 * 1 + 5 * 5 * 5 + 3 * 3 * 3 123456for num in range(100,100):  	hundreds=num//100 #371//100=3  	tens=(num//10)%10 #(371//10)=37 37%10=7    ones=num%10 #371%10=1    if hundreds**3+tens**3+ones**3==num    	print(num)    输出： 1234153370371407  2.数字金字塔要求：打印一个数字金字塔，共n层，当n&#x3D;5时，输出 12345    1   121  12321 1234321123454321  思路：n&#x3D;5时共输出5行，n在最中央，当n&#x3D;1时，n左侧有n-1即4个空格，将金字塔分为两部分，左侧是1～n，右侧是n-1～1. ...</div></div></div></a><a class="pagination-related" href="/2026/04/18/Python%E7%BC%96%E7%A8%8B_%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="Python 循环语句：for 和 while 学习笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-18</div><div class="info-item-2">Python 循环语句：for 和 while 学习笔记</div></div><div class="info-2"><div class="info-item-1">今日大纲介绍 条件判断语句 if 单条件判断 if … else .. 两个条件的判断 if .. elif ..elif ..else  多条件判断   Python中循环的介绍 while  特定场景下，比如说，无线循环，只能用while   for   while循环基本语法及其应用 循环中的两大关键词 break :终止循环 continue：跳过某个条件，继续循环   for循环基本语法及其应用 了解字符串及掌握字符串常见操作  【了解】Python中循环的介绍学习目标 理解循环的概念及其在现实生活中的应用场景。 掌握循环的作用及其在编程中的重要性。  什么是循环现实生活中，也有很多循环的应用场景： （1）食堂阿姨打菜：接过顾客的餐盘→询问菜品→打菜→递回餐盘，重复以上过程，直到所有顾客的菜都打完了 （2）快递员送快递：查看送件地址→赶往目的地→电话告知收件人→收件人签收→交快递件，重复以上过程，直到所有需要送的快递都处理完了。 （3）公交司机…… （4）作业流程…… 以上场景都有一个共同的特点：有条件地重复地做一件事，每一次做的事情不同但类似。 程序是为了解决实际问题...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">算法题总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%9A%8F%E6%9C%BA%E5%88%86%E9%85%8D%E5%8A%9E%E5%85%AC%E5%AE%A4"><span class="toc-number">1.1.</span> <span class="toc-text">1.随机分配办公室</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF"><span class="toc-number">1.2.</span> <span class="toc-text">2.约瑟夫环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9F%A5%E6%89%BE%E5%9B%9E%E6%96%87%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">3.查找回文数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9"><span class="toc-number">1.4.</span> <span class="toc-text">4.删除有序数组中的重复项</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/20/4-20%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/" title="4.20算法题总结">4.20算法题总结</a><time datetime="2026-04-20T13:14:08.000Z" title="Created 2026-04-20 21:14:08">2026-04-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/19/4.19%E7%AE%97%E6%B3%95%E9%A2%98%E6%80%BB%E7%BB%93/" title="算法题总结">算法题总结</a><time datetime="2026-04-19T12:41:26.000Z" title="Created 2026-04-19 20:41:26">2026-04-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/18/Python%E7%BC%96%E7%A8%8B_%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="Python 循环语句：for 和 while 学习笔记">Python 循环语句：for 和 while 学习笔记</a><time datetime="2026-04-17T16:00:00.000Z" title="Created 2026-04-18 00:00:00">2026-04-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/17/hello-world/" title="Hello World">Hello World</a><time datetime="2026-04-17T09:49:26.766Z" title="Created 2026-04-17 17:49:26">2026-04-17</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By John Doe</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5-b1"></script><script src="/js/main.js?v=5.5.5-b1"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
